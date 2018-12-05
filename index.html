@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ticket App</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<style>
+	    body { padding:50px 20px 0 20px; }
+	</style>
+</head>
+<script>
+	function update() {
+		const ticket = document.getElementById('input_ticket');
+		const url = document.getElementById('input_url');
+		window.location = `http://localhost:3000/update?ticket=${ticket.value}&url=${url.value}`;
+	}
+</script>
+<body>
+
+	<h1>Hi there!</h1> 
+	<h4>Please input ticket number and web URL below</h4>
+	<input id="input_ticket" type="text" name="ticketNumber" placeholder="Enter ticket number here" >
+	<input id="input_url" type="text" name="url" placeholder="Enter web URL here" >
+	<button onClick="update()">submit</button>
+</body>
+
